@@ -26,7 +26,6 @@
 
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- Page-specific styling (clean + aligned like your screenshot) -->
     <style>
       :root {
         --accent: #ff751f;
@@ -71,7 +70,7 @@
         color: var(--text);
       }
 
-      /* Content card (make it clear, not transparent) */
+      /* Content card */
       #about .content-card {
         background: #ffffff;
         border: 1px solid var(--border);
@@ -80,44 +79,46 @@
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
       }
 
-      /* INFO LIST: aligned label/value like your screenshot */
+      /* ✅ FIXED: label/value same line using flex */
       .about-info-list {
         list-style: none;
         padding-left: 0;
-        margin: 18px 0 10px 0;
+        margin: 16px 0 10px 0;
       }
 
       .about-info-list li {
-        display: grid;
-        grid-template-columns: 18px 120px 1fr; /* icon | label | value */
-        column-gap: 14px;
-        align-items: start;
-        padding: 14px 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        padding: 12px 0; /* less vertical space */
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
       }
-
       .about-info-list li:last-child {
         border-bottom: 0;
       }
 
       .about-info-list i {
+        flex: 0 0 18px;
         color: var(--accent);
         font-size: 18px;
         line-height: 1;
-        margin-top: 3px;
       }
 
       .info-label {
+        flex: 0 0 120px; /* label width */
         font-weight: 800;
         color: var(--text);
+        white-space: nowrap;
       }
 
       .info-value {
+        flex: 1;
         color: rgba(0, 0, 0, 0.72);
-        word-break: break-word;
+        line-height: 1.3;
       }
 
-      /* Email link should be black (not red) */
+      /* Email link black */
       .info-value a {
         color: var(--text) !important;
         text-decoration: none;
@@ -145,22 +146,16 @@
       }
 
       @media (max-width: 575px) {
-        .about-info-list li {
-          grid-template-columns: 18px 110px 1fr;
-          column-gap: 10px;
+        .info-label {
+          flex-basis: 105px; /* smaller label on mobile */
         }
       }
     </style>
   </head>
 
   <body class="about-page">
-    <header
-      id="header"
-      class="header d-flex align-items-center light-background sticky-top"
-    >
-      <div
-        class="container-fluid position-relative d-flex align-items-center justify-content-between"
-      >
+    <header id="header" class="header d-flex align-items-center light-background sticky-top">
+      <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
           <img src="assets/img/letter-D.png" alt="logo" />
           <h1 class="sitename">ilmi</h1>
@@ -178,37 +173,10 @@
         </nav>
 
         <div class="header-social-links">
-          <a
-            href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr"
-            class="facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-facebook"></i
-          ></a>
-
-          <a
-            href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr"
-            class="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-instagram"></i
-          ></a>
-
-          <a
-            href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-            class="linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-
-          <a
-            href="https://github.com/WMDTHARUSHIKA"
-            class="github"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-github"></i
-          ></a>
+          <a href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr" class="facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/WMDTHARUSHIKA" class="github" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </header>
@@ -217,7 +185,7 @@
       <section id="about" class="about section">
         <div class="container section-title about-title" data-aos="fade-up">
           <h2>About ME</h2>
-          
+          <div class="title-line"></div>
           <p>
             I am a dedicated developer with a passion for learning new technologies and creating impactful projects that
             enhance user experiences.
@@ -292,12 +260,7 @@
 
             <!-- RIGHT -->
             <div class="col-lg-5">
-              <img
-                src="assets/img/profile-img.png"
-                class="img-fluid about-img"
-                alt="Profile image"
-                loading="lazy"
-              />
+              <img src="assets/img/profile-img.png" class="img-fluid about-img" alt="Profile image" loading="lazy" />
             </div>
           </div>
         </div>
@@ -315,43 +278,15 @@
         </div>
 
         <div class="social-links d-flex justify-content-center">
-          <a
-            href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr"
-            class="facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr"
-            class="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-            class="linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/WMDTHARUSHIKA"
-            class="github"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><i class="bi bi-github"></i
-          ></a>
+          <a href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr" class="facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/WMDTHARUSHIKA" class="github" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </footer>
 
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-    >
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
       <i class="bi bi-arrow-up-short"></i>
     </a>
 
