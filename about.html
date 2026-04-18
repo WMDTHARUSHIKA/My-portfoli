@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>ilmi - About</title>
+    <meta name="description" content="About Dilmi Tharushika" />
+    <meta name="keywords" content="Dilmi, About, Full Stack, Java, Spring Boot, React" />
+
+    <link href="assets/img/letter-D.png" rel="icon" />
+    <link href="assets/img/letter-D.png" rel="apple-touch-icon" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Page-specific styling (clean + aligned like your screenshot) -->
+    <style>
+      :root {
+        --accent: #ff751f;
+        --text: #1f1f1f;
+        --muted: rgba(0, 0, 0, 0.7);
+        --border: rgba(0, 0, 0, 0.08);
+      }
+
+      body.about-page #about.section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      /* Title */
+      .section-title.about-title {
+        text-align: center;
+        max-width: 980px;
+        margin: 0 auto 34px auto;
+      }
+      .section-title.about-title h2 {
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .section-title.about-title .title-line {
+        width: 56px;
+        height: 3px;
+        background: var(--accent);
+        margin: 12px auto 0 auto;
+        border-radius: 999px;
+      }
+      .section-title.about-title p {
+        margin-top: 16px;
+        color: var(--muted);
+      }
+
+      .about-role {
+        font-weight: 800;
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: var(--text);
+      }
+
+      /* Content card (make it clear, not transparent) */
+      #about .content-card {
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      /* INFO LIST: aligned label/value like your screenshot */
+      .about-info-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 18px 0 10px 0;
+      }
+
+      .about-info-list li {
+        display: grid;
+        grid-template-columns: 18px 120px 1fr; /* icon | label | value */
+        column-gap: 14px;
+        align-items: start;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .about-info-list li:last-child {
+        border-bottom: 0;
+      }
+
+      .about-info-list i {
+        color: var(--accent);
+        font-size: 18px;
+        line-height: 1;
+        margin-top: 3px;
+      }
+
+      .info-label {
+        font-weight: 800;
+        color: var(--text);
+      }
+
+      .info-value {
+        color: rgba(0, 0, 0, 0.72);
+        word-break: break-word;
+      }
+
+      /* Email link should be black (not red) */
+      .info-value a {
+        color: var(--text) !important;
+        text-decoration: none;
+      }
+      .info-value a:hover {
+        color: var(--accent) !important;
+        text-decoration: underline;
+      }
+
+      /* Image */
+      .about-img {
+        width: 100%;
+        max-height: 560px;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+      }
+
+      #about p {
+        color: var(--muted);
+      }
+      #about .fst-italic {
+        color: rgba(0, 0, 0, 0.72);
+      }
+
+      @media (max-width: 575px) {
+        .about-info-list li {
+          grid-template-columns: 18px 110px 1fr;
+          column-gap: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="about-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container-fluid position-relative d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <img src="assets/img/letter-D.png" alt="logo" />
+          <h1 class="sitename">ilmi</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="header-social-links">
+          <a
+            href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr"
+            class="facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-facebook"></i
+          ></a>
+
+          <a
+            href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr"
+            class="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-instagram"></i
+          ></a>
+
+          <a
+            href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+            class="linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+
+          <a
+            href="https://github.com/WMDTHARUSHIKA"
+            class="github"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="about" class="about section">
+        <div class="container section-title about-title" data-aos="fade-up">
+          <h2>About ME</h2>
+          
+          <p>
+            I am a dedicated developer with a passion for learning new technologies and creating impactful projects that
+            enhance user experiences.
+          </p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 align-items-center">
+            <!-- LEFT -->
+            <div class="col-lg-7">
+              <div class="content-card">
+                <h3 class="about-role">Frontend &amp; Web Developer.</h3>
+
+                <p class="fst-italic">
+                  I am a Software Engineering undergraduate student with a strong interest in building responsive,
+                  user-friendly, and dynamic web applications. Currently, I am learning new technologies to build innovative
+                  solutions.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul class="about-info-list">
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">Birthday:</span>
+                        <span class="info-value">12 July 2001</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">Phone:</span>
+                        <span class="info-value">+94 76 113 1426</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">City:</span>
+                        <span class="info-value">Polonnaruwa, Sri Lanka</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-md-6">
+                    <ul class="about-info-list">
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">Age:</span>
+                        <span class="info-value">25</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">Degree:</span>
+                        <span class="info-value">Software Engineering Undergraduate</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-chevron-right"></i>
+                        <span class="info-label">Email:</span>
+                        <span class="info-value">
+                          <a href="mailto:t.wmdtharu@gmail.com">t.wmdtharu@gmail.com</a>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="mt-3 mb-0">
+                  I am constantly seeking opportunities to expand my skills and contribute to meaningful projects. My
+                  passion for technology drives me to explore new programming languages, frameworks, and tools. I am eager
+                  to collaborate with others and grow as a developer—always aiming to create applications that not only meet
+                  but exceed user expectations.
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-lg-5">
+              <img
+                src="assets/img/profile-img.png"
+                class="img-fluid about-img"
+                alt="Profile image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Dilmi</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+
+        <div class="social-links d-flex justify-content-center">
+          <a
+            href="https://www.facebook.com/share/1BGY48rsrY/?mibextid=wwXIfr"
+            class="facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/dilmi599?igsh=ZnljcjJtNHh1NWhx&utm_source=qr"
+            class="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/dilmi-tharushika-b90120297?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+            class="linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/WMDTHARUSHIKA"
+            class="github"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
